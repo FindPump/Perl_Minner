@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo "Starting Perl Miner..."
+WALLET=$(cat config/wallet.txt)
 
-echo "Wallet:"
-cat config/wallet.txt
-
-echo "Miner started."
+./pearl-miner \
+--host 84.32.220.219:9000 \
+--user $WALLET \
+--worker oncompute
